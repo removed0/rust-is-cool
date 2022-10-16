@@ -2,3 +2,5 @@
 /first-rs.iml
 /Cargo.lock
 /.idea
+/.vscode
+/src/test.rs
