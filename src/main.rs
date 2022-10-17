@@ -1,21 +1,23 @@
 use std::io;
 
+mod one;
+mod r_check;
+mod two;
+
 fn main() {
     let mut input = String::new();
     loop {
-        println!("enter smth");
+        println!("enter one or two");
         io::stdin().read_line(&mut input).unwrap();
 
-        if input.ends_with('\n') {
-            input.pop();
-            if input.ends_with('\r') {
-                input.pop();
-            }
-            if input == "q" {
-                break;
-            }
+        if r_check::r_check(&mut input) {
+            return;
         }
-        println!("++ - {} - ++", input);
+        if input == "one" || input == "1" {
+            one::one();
+        } else if input == "two" || input == "2" {
+            two::two();
+        }
         input.clear();
     }
 }
