@@ -1,18 +1,19 @@
 use std::io;
 
+mod check_q;
 mod one;
-mod r_check;
 mod two;
 
 fn main() {
     let mut input = String::new();
     loop {
-        println!("enter one or two");
+        println!("type quit to exit");
+        println!("type one or two");
         io::stdin().read_line(&mut input).unwrap();
-
-        if r_check::r_check(&mut input) {
+        if check_q::check_q(&mut input) {
             return;
         }
+
         if input == "one" || input == "1" {
             one::one();
         } else if input == "two" || input == "2" {
