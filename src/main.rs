@@ -18,7 +18,7 @@ fn main() -> Result<(), ParseIntError> {
         if input == "one" || input == "1" {
             one::one();
         } else if input == "two" || input == "2" {
-            two::two()?;
+           _ = two::two();
         }
         input.clear();
     }
