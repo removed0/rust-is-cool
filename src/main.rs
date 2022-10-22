@@ -1,11 +1,10 @@
 use std::io;
-use std::num::ParseIntError;
 
 mod check_q;
 mod one;
 mod two;
 
-fn main() -> Result<(), ParseIntError> {
+fn main() {
     let mut input = String::new();
     loop {
         println!("type quit to exit");
