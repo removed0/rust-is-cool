@@ -11,13 +11,13 @@ fn main() {
         println!("type one or two");
         io::stdin().read_line(&mut input).unwrap();
         if check_q::check_q(&mut input) {
-            return Ok(());
+            return;
         }
 
         if input == "one" || input == "1" {
             one::one();
         } else if input == "two" || input == "2" {
-           _ = two::two();
+            let _ = two::two();
         }
         input.clear();
     }
