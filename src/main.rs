@@ -5,6 +5,7 @@ mod one;
 mod two;
 
 fn main() {
+    println!("type quit to exit");
     let mut input = String::new();
     loop {
         println!("type quit to exit");
